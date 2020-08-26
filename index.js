@@ -1,6 +1,6 @@
 function checkInput (a) {
-    var addInput = document.getElementById(a).value;
+    const addInput = document.getElementById(a).value;
     console.log(addInput)
-    var makeArray = addInput.split(',');
+    const makeArray = addInput.split(',');
     console.log(makeArray)
 };
