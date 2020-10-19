@@ -32,5 +32,3 @@ document.body.append(결과창);
         결과창.textContent = '땡';
     }
 });
-
-addEventListener
