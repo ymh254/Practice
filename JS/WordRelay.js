@@ -28,7 +28,12 @@ document.body.append(결과창);
         결과창.textContent='딩동댕';
         단어.textContent = 입력창.value;
         입력창.value = '';
+        입력창.focus();
     } else {
         결과창.textContent = '땡';
+        입력창.value = '';
+        입력창.focus();
     }
 });
+//input과 button 태그를 폼태그로 감싸주고 click을 submit으로 바꿔주면 enter키 사용가능.
+//이 때, 항상 새로고침이 되는데 콜백함수 인자(e)를 주고 e.preventDefault()를 사용해 새로고침 방지.
