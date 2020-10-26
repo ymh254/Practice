@@ -1,0 +1,27 @@
+.image {
+    position: relative;
+    left: 8rem;
+    top: 2rem;
+    width: 15rem;
+}
+
+.profile {
+    position: relative;
+    left: 28rem;
+    top: 4rem;
+    width: 50rem;
+}
+
+.todo {
+    position: relative;
+    left: 11rem;
+    width: 25rem;
+    top: 5rem;   
+}
+
+.calendar {
+    width: 50rem;
+    position: relative;
+    top: 5rem;
+    left: 18rem;
+}
