@@ -25,7 +25,7 @@ const About = () => {
                 </div>
                 <div class="row">
                     <div class="six wide column" className="todo">
-                        <div class="ui segment" style={{ height: "18rem" }}>
+                        <div class="ui segment" style={{ height: "19.5rem" }}>
                             <p style={{ fontSize: "18px" }}>
                                 <strong>Todo List</strong>
                             </p>
