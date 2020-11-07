@@ -9,12 +9,12 @@ export default class NewCalendar extends React.Component {
 
         return (
             <div className="calendar_wrap">
-
                 <FullCalendar
                     defaultView="dayGridMonth"
                     plugins={[dayGridPlugin, interactionPlugin]}
                     events={[{ title: "출석완료", date: "2020-10-31" }]}
                     dateClick={this.handleDateClick}
+                    backgroundColor={'#378006'}
                 />
             </div>
 
