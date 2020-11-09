@@ -1,21 +1,44 @@
-import React from 'react'
-import FullCalendar from '@fullcalendar/react'
+import React, { useState } from 'react'
+import FullCalendar, { asRoughSeconds } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from "@fullcalendar/interaction";
 import "./calendar.scss"
 
 export default class NewCalendar extends React.Component {
-    render() {
-        Date.prototype.yyyymmdd = function () {
-            var yyyy = this.getFullYear().toString();
-            var mm = (this.getMonth() + 1).toString();
-            var dd = this.getDate().toString();
 
-            return yyyy + "-" + (mm[1] ? mm : '0' + mm[0]) + "-" + (dd[1] ? dd : '0' + dd[0]);
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isClicked: true,
+            currentDate: Date()
         }
+    }
+
+    handleDateClick = (arg) => { // bind with an arrow function
+        const { isClicked, currentDate } = this.state;
+
+        if (!isClicked) {
+            this.setState({ isClicked: true, currentDate: arg.dateStr })
+            console.log(arg.dateStr)
+        }
+        if (currentDate === arg.dateStr) {
+            this.setState({ isClicked: false, currentDate: "" })
+        }
+        else {
+            this.setState({ ...this.state, currentDate: arg.dateStr })
+        }
+        // const tdate = arg.dateStr;
+        // this.props.setDate(tdate);
+    }
+
+    render() {
+
+        const { isClicked, currentDate } = this.state;
 
         return (
             <div className="calendar_wrap">
+                {isClicked && <div>{currentDate}</div>}
                 <FullCalendar
                     defaultView="dayGridMonth"
                     plugins={[dayGridPlugin, interactionPlugin]}
@@ -24,12 +47,7 @@ export default class NewCalendar extends React.Component {
                     backgroundColor={'#378006'}
                 />
             </div>
-
         )
     }
-    handleDateClick = (arg) => { // bind with an arrow function
-        console.log(arg.dateStr)
-        // const tdate = arg.dateStr;
-        // this.props.setDate(tdate);
-    }
+
 }
