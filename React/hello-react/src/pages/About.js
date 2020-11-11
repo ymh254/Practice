@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css'
 
 import Profile from './Profile.png'
-import MyCalendar from './MyCalendar'
+import NewCalendar from './calendar/NewCalendar'
 
 const About = () => {
     return (
@@ -35,7 +35,7 @@ const About = () => {
                         </div>
                     </div>
                     <div class="ten wide column" className="calendar">
-                        <MyCalendar />
+                        <NewCalendar />
                     </div>
                 </div>
             </div>

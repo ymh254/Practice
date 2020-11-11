@@ -16,7 +16,7 @@ export const SidebarData = [
     },
     {
         title: 'Calendar',
-        path: '/NewCalendar',
+        path: '/MyCalendar',
         icon: <BsIcons.BsFillCalendarFill />,
         cName: 'nav-text'
     },
