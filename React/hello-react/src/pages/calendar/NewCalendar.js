@@ -3,6 +3,7 @@ import FullCalendar, { asRoughSeconds } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from "@fullcalendar/interaction";
 import "./calendar.scss"
+import DateFunction from "./DateFunction"
 
 export default class NewCalendar extends React.Component {
 
@@ -11,7 +12,7 @@ export default class NewCalendar extends React.Component {
 
         this.state = {
             isClicked: true,
-            currentDate: Date()
+            currentDate: DateFunction()
         }
     }
 
