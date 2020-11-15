@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'
+import './Mypage.css'
 
 import Profile from './Profile.png'
 import NewCalendar from './calendar/NewCalendar'

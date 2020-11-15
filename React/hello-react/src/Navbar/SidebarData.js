@@ -9,8 +9,8 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'About',
-        path: '/About',
+        title: 'Mypage',
+        path: '/Mypage',
         icon: <AiIcons.AiFillBook />,
         cName: 'nav-text'
     },
