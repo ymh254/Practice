@@ -1,6 +1,7 @@
 .navbar {
-    background-color: pink;
+    background-color:pink;
     height: 80px;
+    width: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
