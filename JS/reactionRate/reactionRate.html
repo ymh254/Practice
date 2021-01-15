@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #sqr {
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            left: 30%;
+            position: relative;
+        }
+
+        #sqr.waiting {
+            background: skyblue
+        }
+
+        #word {
+            user-select: none;
+        }
+
+        #sqr.ready {
+            background: red;
+        }
+
+        #sqr.now {
+            background: lightgreen;
+        }
+
+        #result {
+            position: relative;
+            left: 38%;
+            height: 50px;
+            width: 400px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='sqr' class='waiting'>
+        <p id='word'></p>
+    </div>
+    <div id='result'></div>
+    <script src="reactionRate.js"></script>
+</body>
+
+</html>
