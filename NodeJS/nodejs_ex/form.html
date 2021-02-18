@@ -1,0 +1,12 @@
+<!-- action은 전송할 주소를 입력 -->
+<!-- method="post"를 붙이지 않으면 get방식으로
+    http://localhost:3000/process_create?title=[내용]&description=[내용] 형태로 url이 설정됨 -->
+<form action="http://localhost:3000/process_create" method="post">
+    <p><input type="text" name="title"></p>
+    <p>
+        <textarea name="description"></textarea>
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
